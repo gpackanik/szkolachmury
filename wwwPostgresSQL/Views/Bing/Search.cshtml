@@ -1,0 +1,21 @@
+﻿@model IEnumerable<wwwPostgresSQL.Models.SearchResult>
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<form asp-action="Search" style="margin-top:20px;">
+    <input name="searchPhase" />
+    <button type="submit">Search</button>
+</form>
+
+<div class="@(Model.Count() == 0 ? " hidden" : "")">
+    <h2>Search Results:</h2>
+    @foreach (var item in Model)
+    {
+    <div>
+        @Html.Partial("SearchResult.cshtml", item)
+        @*<partial name="SearchResult.cshtml" for="wwwPostgresSQL.Models.SearchResult" model="item" />*@
+    </div>
+    }
+</div>

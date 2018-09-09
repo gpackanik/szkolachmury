@@ -1,0 +1,10 @@
+﻿@model wwwPostgresSQL.Models.SearchResult
+
+<p>
+    <div>
+        <b><a href="@Model.Url">@Model.Name</a></b>
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Desc)
+    </div>
+</p>
