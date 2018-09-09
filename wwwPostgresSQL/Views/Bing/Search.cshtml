@@ -14,8 +14,7 @@
     @foreach (var item in Model)
     {
     <div>
-        @Html.Partial("SearchResult.cshtml", item)
-        @*<partial name="SearchResult.cshtml" for="wwwPostgresSQL.Models.SearchResult" model="item" />*@
+        <partial name="SearchResult.cshtml" model="item" />
     </div>
     }
 </div>
